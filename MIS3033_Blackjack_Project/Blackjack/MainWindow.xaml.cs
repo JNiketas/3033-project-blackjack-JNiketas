@@ -40,10 +40,8 @@ namespace Blackjack
 
             dealtcard = lblCard1.Content.ToString();
 
-
-            
-
-            lblCardValue.Content = cardvalue;
+          
+         
 
         }
 
