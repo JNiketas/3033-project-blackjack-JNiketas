@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Label x:Name="lblCard1" Content="" HorizontalAlignment="Left" Height="117" Margin="62,52,0,0" VerticalAlignment="Top" Width="376" FontSize="20"/>
+        <Button x:Name="btnNewCard" Content="New Card" HorizontalAlignment="Left" Height="51" Margin="294,334,0,0" VerticalAlignment="Top" Width="106" Click="btnNewCard_Click"/>
+        <Label x:Name="lblCardValue" Content="" HorizontalAlignment="Left" Height="117" Margin="551,52,0,0" VerticalAlignment="Top" Width="168"/>
+        <Label x:Name="lblCard2" Content="" HorizontalAlignment="Left" Height="103" Margin="75,148,0,0" VerticalAlignment="Top" Width="325" FontSize="20"/>
 
     </Grid>
 </Window>
