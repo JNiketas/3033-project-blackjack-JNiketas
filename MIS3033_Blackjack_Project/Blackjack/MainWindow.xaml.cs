@@ -1,4 +1,4 @@
-﻿//John Niketas
+﻿//@John Niketas
 
 using System;
 using System.Collections.Generic;
@@ -57,6 +57,7 @@ namespace Blackjack
             lblPlayersCard2.Visibility = Visibility.Visible;
             btnHit.Visibility = Visibility.Visible;
             btnStand.Visibility = Visibility.Visible;
+            lblBlackjack.Visibility = Visibility.Collapsed;
 
             newDeck.Shuffle();
             Card DealerCard1 = new Card();

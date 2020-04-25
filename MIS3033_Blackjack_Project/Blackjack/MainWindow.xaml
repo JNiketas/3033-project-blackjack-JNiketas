@@ -19,6 +19,14 @@
         <Label x:Name="lblPlayersCard3" Content="" HorizontalAlignment="Left" Height="30" Margin="306,284,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
         <Label x:Name="lblPlayersCard4" Content="" HorizontalAlignment="Left" Height="30" Margin="306,249,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
         <Label x:Name="lblPlayersCard5" Content="" HorizontalAlignment="Left" Height="30" Margin="306,214,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
+        <Label x:Name="lblBlackjack" Content="BLACKJACK" HorizontalAlignment="Left" Height="98" Margin="164,93,0,0" VerticalAlignment="Top" Width="416" FontSize="72" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFE62C2C" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
 
     </Grid>
 </Window>
