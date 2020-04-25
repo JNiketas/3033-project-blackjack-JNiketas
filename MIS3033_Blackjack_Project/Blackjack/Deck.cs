@@ -7,9 +7,9 @@ namespace Blackjack
 {
     class Deck
     {
-        public Card[] deck;
-        public Random rand;
-        public int card;
+        public Card[] deck { get; set; }
+        public Random rand { get; set; }
+        public int card { get; set; }
 
         public Deck()
         {
