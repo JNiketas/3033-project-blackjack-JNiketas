@@ -6,11 +6,19 @@
         xmlns:local="clr-namespace:Blackjack"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label x:Name="lblCard1" Content="" HorizontalAlignment="Left" Height="117" Margin="62,52,0,0" VerticalAlignment="Top" Width="376" FontSize="20"/>
-        <Button x:Name="btnNewCard" Content="New Card" HorizontalAlignment="Left" Height="51" Margin="294,334,0,0" VerticalAlignment="Top" Width="106" Click="btnNewCard_Click"/>
-        <Label x:Name="lblCardValue" Content="" HorizontalAlignment="Left" Height="117" Margin="551,52,0,0" VerticalAlignment="Top" Width="168"/>
-        <Label x:Name="lblCard2" Content="" HorizontalAlignment="Left" Height="103" Margin="75,148,0,0" VerticalAlignment="Top" Width="325" FontSize="20"/>
+    <Grid Background="#FF3C930B">
+        <Label x:Name="lblDealerCard1" HorizontalAlignment="Left" Height="30" Margin="306,63,0,0" VerticalAlignment="Top" Width="132" FontWeight="Normal" Background="White" FontSize="14"/>
+        <Label x:Name="lblDealerCard2" HorizontalAlignment="Left" Height="31" Margin="306,98,0,0" VerticalAlignment="Top" Width="132" RenderTransformOrigin="0.513,-0.212" Background="White" FontSize="14"/>
+        <Label x:Name="lblDealer" Content="Dealer" HorizontalAlignment="Left" Height="67" Margin="306,8,0,0" VerticalAlignment="Top" Width="132" FontWeight="Bold" FontSize="36"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Height="21" Margin="339,196,0,0" VerticalAlignment="Top" Width="61" Click="btnStart_Click"/>
+        <Button x:Name="btnRestart" Content="Reset" HorizontalAlignment="Left" Height="21" Margin="10,10,0,0" VerticalAlignment="Top" Width="50" Click="btnRestart_Click"/>
+        <Label x:Name="lblPlayersCard2" Content="" HorizontalAlignment="Left" Height="29" Margin="306,353,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
+        <Label x:Name="lblPlayersCard1" Content="" HorizontalAlignment="Left" Height="29" Margin="306,319,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
+        <Button x:Name="btnHit" Content="HIT" HorizontalAlignment="Left" Height="38" Margin="306,387,0,0" VerticalAlignment="Top" Width="49" Click="btnHit_Click"/>
+        <Button x:Name="btnStand" Content="STAND" HorizontalAlignment="Left" Height="38" Margin="388,387,0,0" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lblPlayersCard3" Content="" HorizontalAlignment="Left" Height="30" Margin="306,284,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
+        <Label x:Name="lblPlayersCard4" Content="" HorizontalAlignment="Left" Height="30" Margin="306,249,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
+        <Label x:Name="lblPlayersCard5" Content="" HorizontalAlignment="Left" Height="30" Margin="306,214,0,0" VerticalAlignment="Top" Width="132" Background="White" FontSize="14"/>
 
     </Grid>
 </Window>

@@ -16,9 +16,7 @@ namespace Blackjack
             card = 0;
             deck = new Card[52];
             rand = new Random();
-            
-            
-
+  
             string[] face = { "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace" };
             string[] suit = { "Diamonds", "Clubs", "Spades", "Hearts" };
 
@@ -27,7 +25,6 @@ namespace Blackjack
                 deck[i] = new Card(face[i % 11], suit[i / 13]);
             }
 
- 
         }
 
         public void Shuffle()
@@ -41,7 +38,6 @@ namespace Blackjack
                 deck[card1] = deck[card2];
                 deck[card2] = temporarycard;
             }
-
             
         }
 

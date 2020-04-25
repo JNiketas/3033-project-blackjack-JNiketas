@@ -22,88 +22,131 @@ namespace Blackjack
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        Deck newDeck = new Deck();
+        int counter = 0;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            Deck newDeck = new Deck();
-            newDeck.Shuffle();
-            Card card1 = new Card();
-            card1 = newDeck.Deal();
-            lblCard1.Content = card1;
+            lblDealer.Visibility = Visibility.Collapsed;
+            lblDealerCard1.Visibility = Visibility.Collapsed;
+            lblDealerCard2.Visibility = Visibility.Collapsed;
+            btnRestart.Visibility = Visibility.Collapsed;
+            lblPlayersCard1.Visibility = Visibility.Collapsed;
+            lblPlayersCard2.Visibility = Visibility.Collapsed;
+            lblPlayersCard3.Visibility = Visibility.Collapsed;
+            lblPlayersCard4.Visibility = Visibility.Collapsed;
+            lblPlayersCard5.Visibility = Visibility.Collapsed;
+            btnHit.Visibility = Visibility.Collapsed;
+            btnStand.Visibility = Visibility.Collapsed;
 
-            newDeck.Shuffle();
-
-            lblCard2.Content = newDeck.Deal();
-
-            string dealtcard = "";
-
-            dealtcard = lblCard1.Content.ToString();
-
-          
-         
 
         }
 
-        private void btnNewCard_Click(object sender, RoutedEventArgs e)
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            Deck newDeck = new Deck();
+            btnStart.Visibility = Visibility.Collapsed;
+            lblDealer.Visibility = Visibility.Visible;
+            lblDealerCard1.Visibility = Visibility.Visible;
+            lblDealerCard2.Visibility = Visibility.Visible;
+            btnRestart.Visibility = Visibility.Visible;
+            lblPlayersCard1.Visibility = Visibility.Visible;
+            lblPlayersCard2.Visibility = Visibility.Visible;
+            btnHit.Visibility = Visibility.Visible;
+            btnStand.Visibility = Visibility.Visible;
+
             newDeck.Shuffle();
-            string dealtcard = "";
-            int cardvalue = 0;
-
-            lblCard1.Content = newDeck.Deal();
+            Card DealerCard1 = new Card();
+            DealerCard1 = newDeck.Deal();
+            lblDealerCard1.Content = DealerCard1;
 
             newDeck.Shuffle();
+            Card DealerCard2 = new Card();
+            DealerCard2 = newDeck.Deal();
+            lblDealerCard2.Content = DealerCard2;
 
-            lblCard2.Content = newDeck.Deal();
+            newDeck.Shuffle();
+            Card PlayersCard1 = new Card();
+            PlayersCard1 = newDeck.Deal();
+            lblPlayersCard1.Content = PlayersCard1;
 
-            dealtcard = lblCard1.Content.ToString();
+            newDeck.Shuffle();
+            Card PlayersCard2 = new Card();
+            PlayersCard2 = newDeck.Deal();
+            lblPlayersCard2.Content = PlayersCard2;
+
+        }
+
+        private void btnRestart_Click(object sender, RoutedEventArgs e)
+        {
             
+            newDeck.Shuffle();
+            Card DealerCard1 = new Card();
+            DealerCard1 = newDeck.Deal();
+            lblDealerCard1.Content = DealerCard1;
 
-            if (dealtcard.Contains("Two"))
+            newDeck.Shuffle();
+            Card DealerCard2 = new Card();
+            DealerCard2 = newDeck.Deal();
+            lblDealerCard2.Content = DealerCard2;
+
+            newDeck.Shuffle();
+            Card PlayersCard1 = new Card();
+            PlayersCard1 = newDeck.Deal();
+            lblPlayersCard1.Content = PlayersCard1;
+
+            newDeck.Shuffle();
+            Card PlayersCard2 = new Card();
+            PlayersCard2 = newDeck.Deal();
+            lblPlayersCard2.Content = PlayersCard2;
+
+            lblPlayersCard3.Visibility = Visibility.Collapsed;
+            lblPlayersCard4.Visibility = Visibility.Collapsed;
+            lblPlayersCard5.Visibility = Visibility.Collapsed;
+
+            counter = 0;
+        }
+
+        private void btnHit_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (counter == 0)
             {
-                cardvalue = 2;
+                lblPlayersCard3.Visibility = Visibility.Visible;
+
+                newDeck.Shuffle();
+                Card PlayersCard3 = new Card();
+                PlayersCard3 = newDeck.Deal();
+                lblPlayersCard3.Content = PlayersCard3;
+
+                counter++;
             }
-            else if (dealtcard.Contains("Three"))
+            else if (counter == 1)
             {
-                cardvalue = 3;
-            }
-            else if (dealtcard.Contains("Four"))
-            {
-                cardvalue = 4;
-            }
-            else if (dealtcard.Contains("Five"))
-            {
-                cardvalue = 5;
-            }
-            else if (dealtcard.Contains("Six"))
-            {
-                cardvalue = 6;
-            }
-            else if (dealtcard.Contains("Seven"))
-            {
-                cardvalue = 7;
-            }
-            else if (dealtcard.Contains("Eight"))
-            {
-                cardvalue = 8;
-            }
-            else if (dealtcard.Contains("Nine"))
-            {
-                cardvalue = 9;
-            }
-            else if (dealtcard.Contains("Ten") || dealtcard.Contains("Jack") || dealtcard.Contains("Queen") || dealtcard.Contains("King"))
-            {
-                cardvalue = 10;
-            }
-            else if (dealtcard.Contains("Ace"))
-            {
-                cardvalue = 11;
+                lblPlayersCard4.Visibility = Visibility.Visible;
+
+                newDeck.Shuffle();
+                Card PlayersCard4 = new Card();
+                PlayersCard4 = newDeck.Deal();
+                lblPlayersCard4.Content = PlayersCard4;
+
+                counter++;
             }
 
-            lblCardValue.Content = cardvalue;
+            else if (counter == 2)
+            {
+                lblPlayersCard5.Visibility = Visibility.Visible;
 
+                newDeck.Shuffle();
+                Card PlayersCard5 = new Card();
+                PlayersCard5 = newDeck.Deal();
+                lblPlayersCard5.Content = PlayersCard5;
+
+                counter++;
+            }
 
 
         }
